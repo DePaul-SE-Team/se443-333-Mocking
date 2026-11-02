@@ -1,7 +1,5 @@
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/arguments/SAPInvoiceSenderTest.java
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/stub/InvoiceFilterTest.java
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/exception/SAPInvoiceSenderTest.java
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/stub/InvoiceFilterWithDatabaseTest.java
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/bookstore/BookStoreTest.java
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/christmas/ChristmasDiscountTest.java
-/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/mock/SAPInvoiceSenderTest.java
+/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/practice1_invoice/InvoiceTest.java
+/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/practice2_todo/TodoBusinessImplTest.java
+/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/practice3_bank/BankTest.java
+/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/practice5_discount/ChristmasDiscountTest.java
+/mnt/c/Users/DKIM121/Documents/DePaul/se331/Fall2026/Effective Testing/code/ch6/src/test/java/ch6/practice4_email/EmailServiceTest.java
