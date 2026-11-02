@@ -18,19 +18,14 @@ public class ChristmasDiscountTest {
 
     @Test
     public void christmas() {
-        LocalDate christmas = LocalDate.of(2015, Month.DECEMBER, 25);
-        when(clock.now()).thenReturn(christmas);
-
-        double finalValue = cd.applyDiscount(100.0);
-        assertThat(finalValue).isCloseTo(85.0, offset(0.001));
+        // TODO: Check that a 15% discount is applied on Christmas day.
+        // Hint: How can you control what "today" is inside a test?
+        //       Be careful when comparing doubles.
     }
 
     @Test
     public void notChristmas() {
-        LocalDate notChristmas = LocalDate.of(2015, Month.DECEMBER, 26);
-        when(clock.now()).thenReturn(notChristmas);
-
-        double finalValue = cd.applyDiscount(100.0);
-        assertThat(finalValue).isCloseTo(100.0, offset(0.001));
+        // TODO: Check that no discount is applied on a day other than Christmas.
+        // Hint: Which date makes a good boundary case?
     }
 }

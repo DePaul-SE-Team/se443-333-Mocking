@@ -27,33 +27,21 @@ public class SAPInvoiceSenderTest {
             "M,X"}
     )
     void sendToSapWithTheGeneratedId(String customer, String initialId) {
-        Invoice kim = new Invoice(customer, 20);
-
-        List<Invoice> invoices = Arrays.asList(kim);
-        when(filter.lowValueInvoices()).thenReturn(invoices);
-
-        sender.sendLowValuedInvoices();
-
-        ArgumentCaptor<SapInvoice> captor = ArgumentCaptor.forClass(SapInvoice.class);
-        verify(sap).send(captor.capture());
-
-        SapInvoice generatedSapInvoice = captor.getValue();
-
-        String date = LocalDate.now().format(DateTimeFormatter.ofPattern("MMddyyyy"));
-        assertThat(generatedSapInvoice).isEqualTo(new SapInvoice(customer, 20, date + initialId));
+        // TODO: Check that the SapInvoice sent to SAP has the correct ID.
+        //       ID format: today's date (MMddyyyy) + first two letters of the
+        //       customer name, or "X" if the name is too short.
+        // Hint: The SapInvoice is created inside the method, so you can't build
+        //       it ahead of time. How can you grab the argument passed to a mock?
+        //       (Look up Mockito's ArgumentCaptor.)
     }
 
 
     @Test
     void oldExample() {
-        Invoice kim = new Invoice("Kim", 20);
-
-        List<Invoice> invoices = Arrays.asList(kim);
-        when(filter.lowValueInvoices()).thenReturn(invoices);
-
-        sender.sendLowValuedInvoices();
-
-        verify(sap).send(any(SapInvoice.class));
+        // TODO: Write a weaker version of the test above that only checks that
+        //       *some* SapInvoice was sent.
+        // Hint: Look up Mockito's argument matchers.
+        // Think: What bugs would this test miss that the captor test catches?
     }
 
 

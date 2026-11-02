@@ -19,25 +19,14 @@ public class SAPInvoiceSenderTest {
 
     @Test
     void sendToSap() {
-        Invoice kim = new Invoice("Kim", 20);
-        Invoice frank = new Invoice("Frank", 99);
-
-        List<Invoice> invoices = Arrays.asList(kim, frank);
-        when(filter.lowValueInvoices()).thenReturn(invoices);
-
-        sender.sendLowValuedInvoices();
-
-        verify(sap).send(kim);
-        verify(sap).send(frank);
+        // TODO: Check that every low-value invoice is sent to SAP.
+        // Hint: The method returns nothing. How can you check what it did?
     }
 
     @Test
     void noLowValueInvoices() {
-        List<Invoice> invoices = emptyList();
-        when(filter.lowValueInvoices()).thenReturn(invoices);
-
-        sender.sendLowValuedInvoices();
-
-        verify(sap, never()).send(any(Invoice.class));
+        // TODO: Check that nothing is sent to SAP when there are no
+        //       low-value invoices.
+        // Hint: How do you check that a mock method was never called?
     }
 }

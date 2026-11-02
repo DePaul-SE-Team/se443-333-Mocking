@@ -27,19 +27,9 @@ public class InvoiceFilterWithDatabaseTest {
 
     @Test
     void filterInvoices() {
-        final var kim = new Invoice("Kim", 20);
-        final var steve = new Invoice("Steve", 99);
-        final var frank = new Invoice("Frank", 100);
-
-        // really saves the invoice to the database...
-        // this is no good.
-        invoices.save(kim);
-        invoices.save(steve);
-        invoices.save(frank);
-
-        final InvoiceFilterWithDatabase filter = new InvoiceFilterWithDatabase();
-
-        assertThat(filter.lowValueInvoices())
-                .containsExactlyInAnyOrder(kim, steve);
+        // TODO: Test InvoiceFilterWithDatabase using the real database
+        //       (the setup above already opens and resets it).
+        // Think: Compare this with InvoiceFilterTest. Why is this version slower
+        //        and harder to maintain? What does stubbing buy us?
     }
 }

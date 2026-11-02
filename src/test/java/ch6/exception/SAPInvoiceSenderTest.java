@@ -20,27 +20,10 @@ public class SAPInvoiceSenderTest {
 
     @Test
     void returnFailedInvoices() {
-        Invoice kim = new Invoice("Kim", 20);
-        Invoice frank = new Invoice("Frank", 25);
-        Invoice steve = new Invoice("Steve", 48);
-
-        List<Invoice> invoices = Arrays.asList(kim, frank, steve);
-        when(filter.lowValueInvoices()).thenReturn(invoices);
-
-        String date = LocalDate.now().format(DateTimeFormatter.ofPattern("MMddyyyy"));
-        SapInvoice franksInvoice = new SapInvoice("Frank", 25, date + "Fr");
-        doThrow(new SAPException()).when(sap).send(franksInvoice);
-
-        List<Invoice> failedInvoices = sender.sendLowValuedInvoices();
-        assertThat(failedInvoices).containsExactly(frank);
-
-        SapInvoice kimsInvoice = new SapInvoice("Kim", 20, date + "Ki");
-        verify(sap).send(kimsInvoice);
-
-        SapInvoice stevesInvoice = new SapInvoice("Steve", 48, date + "St");
-        verify(sap).send(stevesInvoice);
-
-
+        // TODO: SAP fails for one of the invoices. Check that this invoice is
+        //       returned as failed and the others are still sent.
+        // Hint: send() returns void. How do you make a void mock method throw?
+        //       (Look up Mockito's doThrow.)
     }
 
 

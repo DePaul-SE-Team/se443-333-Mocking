@@ -13,19 +13,9 @@ public class InvoiceFilterTest {
 
     @Test
     void filterInvoices() {
-        IssuedInvoices issuedInvoices = mock(IssuedInvoices.class);
-
-        Invoice kim = new Invoice("Kim", 20);
-        Invoice steve = new Invoice("Steve", 99);
-        Invoice frank = new Invoice("Frank", 100);
-
-        List<Invoice> listOfInvoices = Arrays.asList(kim, steve, frank);
-        when(issuedInvoices.all()).thenReturn(listOfInvoices);
-
-        InvoiceFilter filter = new InvoiceFilter(issuedInvoices);
-
-        assertThat(filter.lowValueInvoices())
-                .containsExactlyInAnyOrder(kim, steve);
+        // TODO: Test InvoiceFilter without a real database.
+        // Hint: Stub IssuedInvoices. "Low value" means value < 100, so choose
+        //       values on both sides of that boundary.
     }
 
     // you may want to add more tests here.
